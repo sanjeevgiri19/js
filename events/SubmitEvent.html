@@ -1,0 +1,57 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submit Event Example</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" name="username" placeholder="Enter username" required>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="result"></p>
+    <script>
+        const form = document.getElementById('myForm');
+        const result = document.getElementById('result');
+        
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+            const username = form.username.value;
+            result.innerText = `Form submitted with username: ${username}`;
+        });
+    </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation Example</title>
+</head>
+<body>
+    <div id="outerDiv" style="padding: 20px; border: 1px solid black;">
+        Outer Div
+        <div id="innerDiv" style="padding: 20px; border: 1px solid black;">
+            Inner Div
+        </div>
+    </div>
+    <script>
+        const outerDiv = document.getElementById('outerDiv');
+        const innerDiv = document.getElementById('innerDiv');
+        
+        outerDiv.addEventListener('click', (event) => {
+            alert('Outer Div clicked!');
+        }, true); // Use capturing phase
+        
+        innerDiv.addEventListener('click', (event) => {
+            alert('Inner Div clicked!');
+        });
+    </script>
+</body>
+</html>
+

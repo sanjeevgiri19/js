@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events Example</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p id="myParagraph">Hover over this paragraph.</p>
+    <script>
+        const paragraph = document.getElementById('myParagraph');
+        paragraph.addEventListener('mouseover', () => {
+            paragraph.classList.add('highlight');
+        });
+        paragraph.addEventListener('mouseout', () => {
+            paragraph.classList.remove('highlight');
+        });
+    </script>
+</body>
+</html>

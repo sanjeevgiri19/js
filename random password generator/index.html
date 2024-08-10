@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random password generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Generate a <span>Random Password</span></h2>
+        <div class="display">
+            <input type="text" id="password" placeholder="password">
+            <img height="22px" width="20px" src="copy-icon.webp" alt=""  onclick="copyPassword()">
+        </div>
+        <button onclick="createPassword()">Generate Password</button>
+      </div>
+
+      
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h2>Random Password Generator</h2>
+
+<button onclick="generatePassword()">Generate Password</button>
+<p id="password"></p>
+
+<script>
+function generatePassword(length = 12) {
+  const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
+  let password = "";
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * charset.length);
+    password += charset[randomIndex];
+  }
+  document.getElementById("password").innerText = password;
+}
+
+generatePassword();
+</script>
+
+</body>
+</html> -->
